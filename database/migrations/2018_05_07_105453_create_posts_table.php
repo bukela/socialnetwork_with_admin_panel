@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title',256);
-            $table->string('subheading',100);
+            $table->string('subtitle',100);
             $table->string('slug',100);
             $table->boolean('status')->nullable();
             $table->integer('posted_by')->nullable();
