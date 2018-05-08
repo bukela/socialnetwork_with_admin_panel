@@ -12,8 +12,7 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                <form role="form" action="{{ route('post.store') }}" method="POST">
-                    {{ csrf_field() }}
+                    <form role="form">
                         <div class="box-body">
                             <div class="col-lg-6">
                                 <div class="form-group">

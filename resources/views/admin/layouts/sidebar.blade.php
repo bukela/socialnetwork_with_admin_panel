@@ -31,10 +31,10 @@
                 <span class="pull-right-container">
                 </span>
               </a>
-                    <li class=""><a href="index.html"><i class="fa fa-circle-o"></i>Posts</a></li>
-                    <li class=""><a href="index.html"><i class="fa fa-circle-o"></i>Categories</a></li>
-                    <li class=""><a href="index.html"><i class="fa fa-circle-o"></i>Tags</a></li>
-                    <li class=""><a href="index.html"><i class="fa fa-circle-o"></i>Users</a></li>
+                    <li class=""><a href="{{ route('admin.post') }}"><i class="fa fa-circle-o"></i>Posts</a></li>
+                    <li class=""><a href="{{ route('admin.category') }}"><i class="fa fa-circle-o"></i>Categories</a></li>
+                    <li class=""><a href="{{ route('admin.tag') }}"><i class="fa fa-circle-o"></i>Tags</a></li>
+                    <li class=""><a href="{{ route('user.index') }}"><i class="fa fa-circle-o"></i>Users</a></li>
             </li>
         </ul>
     </section>
