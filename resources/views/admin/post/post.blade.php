@@ -12,7 +12,12 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                <form role="form" action="{{ route('post.store') }}" method="POST">
+                @if (count($errors) > 0)
+                    @foreach($errors->all() as $error)
+                    <p class="alert alert-danger"> {{ $error }} </p>
+                    @endforeach
+                @endif
+                <form role="form" action="{{ route('post.store') }}" method="post">
                     {{ csrf_field() }}
                         <div class="box-body">
                             <div class="col-lg-6">
@@ -58,9 +63,9 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body pad">
-                                <form>
+                                
                                     <textarea name="body" class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                                </form>
+                                
                             </div>
                         </div>
                         <div class="box-footer">

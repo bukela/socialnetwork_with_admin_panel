@@ -12,7 +12,13 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form role="form">
+                    @if (count($errors) > 0)
+                        @foreach ($errors->all() as $error)
+                            <p class="alert alert-danger">{{ $error }}</p>
+                        @endforeach
+                    @endif
+                <form role="form" action="{{ route('category.store') }}" method="POST">
+                            {{ csrf_field() }}
                         <div class="box-body">
                             <div class="col-lg-6 col-lg-offset-3">
                                 <div class="form-group">
