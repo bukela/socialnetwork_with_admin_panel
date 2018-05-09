@@ -12,13 +12,7 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    @if (count($errors) > 0)
-
-                    @foreach ($errors->all() as $error)
-                        <p class="alert alert-danger">{{ $error }}</p>
-                    @endforeach
-                        
-                    @endif
+                    @include('inc.messages')
                 <form role="form" action="{{ route('tag.store') }}" method="POST">
                     {{ csrf_field() }}
                         <div class="box-body">
